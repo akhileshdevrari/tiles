@@ -139,19 +139,19 @@ function update_game_area()
 	}
 	//Check if screen is swiped to move the ball
 	document.addEventListener('swiped-up', function(e){
-		if(ball.y > 0.2*HEIGHT)
+		if(ball.y > (1/num_y)*HEIGHT)
 			ball.y -= HEIGHT/num_y;
 	});
 	document.addEventListener('swiped-down', function(e){
-		if(ball.y < 0.8*HEIGHT)
+		if(ball.y < ((num_y-1)/num_y)*HEIGHT)
 			ball.y += HEIGHT/num_y;	
 	});
 	document.addEventListener('swiped-left', function(e){
-		if(ball.x > (2.0/num_x)*WIDTH)
+		if(ball.x > (1/num_x)*WIDTH)
 			ball.x -= WIDTH/num_x;
 	});
 	document.addEventListener('swiped-right', function(e){
-		if(ball.x < (4.0/num_x)*WIDTH)
+		if(ball.x < ((num_x-1)/num_x)*WIDTH)
 			ball.x += WIDTH/num_x;
 	});
 
